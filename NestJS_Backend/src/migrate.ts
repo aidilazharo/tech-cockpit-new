@@ -1,0 +1,1 @@
+import {client,migrate} from './database';import {migrateCockpit} from './cockpit';async function run(){try{await migrate();await migrateCockpit();}finally{client.close();}}void run().catch(error=>{console.error(error);process.exitCode=1;});

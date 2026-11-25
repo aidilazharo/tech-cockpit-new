@@ -1,0 +1,39 @@
+{
+  "name": "atgv-react-api-sqlite",
+  "private": true,
+  "version": "0.1.4",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --test test/ui.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:e2e:setup": "npm install --no-save --package-lock=false --ignore-scripts --no-audit --no-fund @playwright/test@1.65.1 @axe-core/playwright@4.14.0",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "express": "^4.21.0",
+    "drizzle-orm": "^0.45.4",
+    "@libsql/client": "^0.15.0",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.0",
+    "typescript": "~5.9.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
+  "atgvOptionalBrowserTests": {
+    "@playwright/test": "1.65.1",
+    "@axe-core/playwright": "4.14.0"
+  }
+}
